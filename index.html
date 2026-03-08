@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | Pan Ei Khaing</title>
+    <title>Pan Ei Khaing | Business Analyst</title>
     <style>
         * {
             margin: 0;
@@ -12,61 +12,415 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #0F172A;
+        }
+        
+        /* Hero Section */
+        .hero {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            text-align: center;
             color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #F59E0B;
         }
         
-        h1 {
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #F59E0B;
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+            margin-bottom: 25px;
+        }
+        
+        .hero h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #F59E0B;
         }
         
-        p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
+        .hero .title {
+            font-size: 1.5rem;
             opacity: 0.9;
+            margin-bottom: 25px;
         }
         
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: #F59E0B;
-            color: #0F172A;
-            text-decoration: none;
-            border-radius: 30px;
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 25px;
             font-size: 1.1rem;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0.85;
         }
         
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 25px;
         }
         
-        .emoji {
-            font-size: 5rem;
-            margin-bottom: 20px;
+        .contact-info a {
+            color: #F59E0B;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #E2E8F0;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Sections */
+        section {
+            background: #1E293B;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+        }
+        
+        h2 {
+            color: #F59E0B;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #F59E0B;
+        }
+        
+        /* Experience */
+        .job {
+            margin-bottom: 30px;
+        }
+        
+        .job:last-child {
+            margin-bottom: 0;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .job h3 {
+            font-size: 1.3rem;
+            color: #F59E0B;
+        }
+        
+        .job .company {
+            color: #94A3B8;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .job .period {
+            color: #64748B;
+            font-size: 0.95rem;
+        }
+        
+        .job ul {
+            margin-left: 20px;
+        }
+        
+        .job li {
+            margin-bottom: 10px;
+            color: #CBD5E1;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-category h3 {
+            color: #F59E0B;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            background: #0F172A;
+            padding: 10px 18px;
+            margin-bottom: 10px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: #E2E8F0;
+            border: 1px solid #334155;
+        }
+        
+        /* Languages */
+        .languages {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .language {
+            background: #0F172A;
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        
+        .language strong {
+            display: block;
+            font-size: 1.2rem;
+            color: #F59E0B;
+            margin-bottom: 5px;
+        }
+        
+        .language span {
+            color: #94A3B8;
+        }
+        
+        /* Achievements */
+        .achievements ul {
+            list-style: none;
+        }
+        
+        .achievements li {
+            padding: 15px 0;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #E2E8F0;
+        }
+        
+        .achievements li:last-child {
+            border-bottom: none;
+        }
+        
+        .achievements .icon {
+            font-size: 1.3rem;
+        }
+        
+        /* Education */
+        .education-item {
+            padding: 20px;
+            background: #0F172A;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        
+        .education-item h3 {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .education-item p {
+            color: #94A3B8;
+            margin-bottom: 5px;
+        }
+        
+        /* Objective */
+        .objective p {
+            color: #CBD5E1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748B;
+            border-top: 1px solid #334155;
+        }
+        
+        footer a {
+            color: #F59E0B;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .title {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            section {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="emoji">👋</div>
-        <h1>Welcome!</h1>
-        <p>You found my workspace</p>
-        <a href="https://pan-ei-khaing.github.io/portfolio/" class="btn">View My Portfolio →</a>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="profile.jpg" alt="Pan Ei Khaing" class="profile-img">
+        <h1>Pan Ei Khaing</h1>
+        <div class="title">Business Analyst</div>
+        <p>Results-oriented Business Analyst with expertise in requirements gathering, process analysis, and stakeholder management.</p>
+        <div class="contact-info">
+            <span>📧 paneikhaing8991@gmail.com</span>
+            <span>📱 +959 7800 14932</span>
+            <span>📍 Tatkone, Nay Pyi Taw, Myanmar</span>
+            <span><a href="https://www.linkedin.com/in/pan-ei-khaing-82240b240" target="_blank">🔗 LinkedIn</a></span>
+        </div>
     </div>
+    
+    <div class="container">
+        <!-- Objective -->
+        <section class="objective">
+            <h2>🎯 Objective</h2>
+            <p>To leverage my analytical and communication skills to deliver value-driven solutions by gathering, analyzing, and translating business requirements into actionable specifications that align stakeholder needs with technical implementation.</p>
+        </section>
+        
+        <!-- Education -->
+        <section>
+            <h2>🎓 Education</h2>
+            <div class="education-item">
+                <h3>B.E (Electronics and Communication)</h3>
+                <p>Technological University (Yamethin)</p>
+                <p>2018 - 2022 | Myanmar</p>
+            </div>
+        </section>
+        
+        <!-- Experience -->
+        <section>
+            <h2>💼 Professional Experience</h2>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Business Analyst</h3>
+                    <span class="period">2022 - Present</span>
+                </div>
+                <p class="company">NexStack Pte Ltd</p>
+                <ul>
+                    <li>Gather and analyze business requirements from stakeholders and convert them into clear functional specifications</li>
+                    <li>Create and maintain project documentation including Functional Specification Documents (FSD), User Stories, and Process Flows</li>
+                    <li>Prepare UAT test scenarios and test cases, and coordinate User Acceptance Testing with stakeholders</li>
+                    <li>Monitor development progress and support clarification of requirements during the development lifecycle</li>
+                    <li>Track system issues and bugs, and coordinate with developers to ensure timely resolution</li>
+                    <li>Validate implemented features to confirm they meet business requirements before deployment</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Skills -->
+        <section>
+            <h2>🛠️ Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Business Analysis</h3>
+                    <ul>
+                        <li>Requirements Gathering</li>
+                        <li>Business Process Analysis</li>
+                        <li>Functional Spec Documentation</li>
+                        <li>User Story Writing</li>
+                        <li>UAT Testing</li>
+                        <li>SDLC</li>
+                        <li>Agile / Scrum</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>API Testing</li>
+                        <li>SQL Basics</li>
+                        <li>JIRA</li>
+                        <li>Confluence</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Networking Knowledge</h3>
+                    <ul>
+                        <li>TCP/IP</li>
+                        <li>OSI Model</li>
+                        <li>DNS & DHCP</li>
+                        <li>VLAN</li>
+                        <li>OSPF</li>
+                        <li>GPON</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Problem Solving</li>
+                        <li>Stakeholder Management</li>
+                        <li>Presentation</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Languages -->
+        <section>
+            <h2>🌐 Languages</h2>
+            <div class="languages">
+                <div class="language">
+                    <strong>English</strong>
+                    <span>Intermediate</span>
+                </div>
+                <div class="language">
+                    <strong>Burmese</strong>
+                    <span>Native</span>
+                </div>
+                <div class="language">
+                    <strong>Japanese</strong>
+                    <span>Basic</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievements -->
+        <section class="achievements">
+            <h2>🏆 Achievements</h2>
+            <ul>
+                <li><span class="icon">📜</span> Certificate of Completion – Programming Fundamentals</li>
+                <li><span class="icon">📜</span> Certificate – Foundation Leadership & Capacity Development</li>
+                <li><span class="icon">🎓</span> Graduation Thesis: Design and Construction of Digital Taxi Fare Meter</li>
+                <li><span class="icon">🚀</span> Participant – Startup Challenge 2019</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2026 Pan Ei Khaing. Built with 💜</p>
+    </footer>
 </body>
 </html>
